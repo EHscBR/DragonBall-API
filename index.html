@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball - Personagens</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Estrutura principal do formulário -->
+    <main class="cartao-formulario">
+
+        <h2>Consulta Dragon Ball</h2>
+
+        <p class="instrucao">
+            Digite o nome de um personagem para buscar suas informações.
+        </p>
+
+        <form id="formulario-endereco">
+
+            <!-- Linha de busca do personagem -->
+            <label for="campo-cep">Nome do personagem</label>
+
+            <div class="linha-busca">
+
+                <input
+                    type="text"
+                    id="campo-cep"
+                    placeholder="Ex: Goku, Vegeta, Gohan..."
+                    required
+                >
+
+                <button type="submit" id="botao-buscar">
+                    Buscar
+                </button>
+
+            </div>
+
+            <!-- Mensagem de carregamento ou erro -->
+            <span id="mensagem-status" class="mensagem"></span>
+
+            <!-- Imagem do personagem -->
+            <div class="imagem-personagem">
+                <img id="imagem-personagem" src="" alt="Imagem do personagem">
+            </div>
+
+            <!-- Informações preenchidas pela API -->
+            <label for="campo-logradouro">Nome</label>
+            <input type="text" id="campo-logradouro" placeholder="Aguardando personagem..." readonly>
+
+            <label for="campo-bairro">Raça</label>
+            <input type="text" id="campo-bairro" placeholder="Raça" readonly>
+
+            <div class="linha-dupla">
+
+                <div>
+                    <label for="campo-cidade">Gênero</label>
+                    <input type="text" id="campo-cidade" placeholder="Gênero" readonly>
+                </div>
+
+                <div>
+                    <label for="campo-estado">Afiliação</label>
+                    <input type="text" id="campo-estado" placeholder="Afiliação" readonly>
+                </div>
+
+            </div>
+
+            <!-- Poder do personagem -->
+            <div class="linha-dupla">
+
+                <div>
+                    <label for="campo-numero">Ki</label>
+                    <input type="text" id="campo-numero" placeholder="Ki" readonly>
+                </div>
+
+                <div>
+                    <label for="campo-complemento">Ki máximo</label>
+                    <input type="text" id="campo-complemento" placeholder="Ki máximo" readonly>
+                </div>
+
+            </div>
+
+            <!-- Planeta de origem -->
+            <label for="campo-planeta">Planeta de origem</label>
+            <input type="text" id="campo-planeta" placeholder="Planeta" readonly>
+
+            <!-- Descrição -->
+            <label for="campo-descricao">Descrição</label>
+            <textarea id="campo-descricao" placeholder="Descrição do personagem..." readonly></textarea>
+
+            <button type="button" class="botao-sucesso" id="botao-concluir">
+                Concluir Consulta
+            </button>
+
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
